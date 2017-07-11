@@ -1,0 +1,49 @@
+body  {
+  background: black;
+}
+img {
+  display: block;
+}
+#board {
+  background-image: url("../images/city.jpg");
+  background-size: cover;
+  background-position: bottom;
+}
+
+.box {
+  border: .5px dotted gray;
+  height: 150px;
+  background: none;
+}
+
+#r1 {
+    background-image: url("images/coptor.png");
+}
+
+.blue {
+  border: 1px solid black;
+  height: 150px;
+  background: blue;
+}
+
+.red {
+  border: 1px solid black;
+  height: 150px;
+  background: red;
+}
+
+.box:hover {
+  background-color: white;
+}
+
+span {
+  color: #EE2D0D;
+}
+
+h3 {
+  text-align: center;
+}
+
+h1 {
+  color: white;
+}
