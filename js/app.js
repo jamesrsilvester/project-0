@@ -2,13 +2,50 @@
 $(document).ready(function() {
   // all code to manipulate the DOM goes inside this function
   console.log("Script is linked");
-  //assigns overall listener as gameboard
-  let $gameboard = $('#board');
 
-
-  // Reset button
+  // Reset Logic
   hitReset = function () {location.reload()};
-  $('#button').on("click", hitReset);
+    //Reset Button Listener
+    $('#reset').on("click", hitReset);
+
+
+  // Click Start Button to....
+  $('#start').on("click", mouseTracking = function () {
+      //remove start button
+      $('#start').remove();
+      //track mouseover....
+      $gameboard.on("mouseover", function (event) {
+      idBoxClicked = event.target.id;
+      //Checks for bomb
+      if ($(`#${idBoxClicked}`).hasClass("bomb")) {console.log("bomb");}
+      //printing mouseover location
+      console.log(`${idBoxClicked} was moused over`);
+      //add helicopter class
+      $(`#${idBoxClicked}`).addClass( "heli" );
+      })
+      //on Mouseoff
+      $gameboard.on("mouseleave", function (event) {
+      idBoxClicked = event.target.id;
+      //printing mouseover location
+      console.log(`mouse left ${idBoxClicked}`);
+      //remove helicopter class
+      $(`#${idBoxClicked}`).removeClass( "heli" );
+      })
+
+
+  });
+
+  //assigns overall listener as gameboard
+  let $gameboard = $('#gameboard');
+
+  //prints box clicked to console.
+  $gameboard.on("click", function (event) {
+    idBoxClicked = event.target.id;
+    console.log(`${idBoxClicked} was clicked`);
+  })
+
+
+});
 
 /*
 
@@ -131,3 +168,4 @@ $(`h3`).text( "It's a DRAW" ).css({'color':"black"});}
 else if (movesMade.length === 10)
 {hitReset();}
 }
+*/

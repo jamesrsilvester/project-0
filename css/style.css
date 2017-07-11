@@ -1,25 +1,69 @@
-body  {
+/*
+Animations:
+*/
+
+body {
   background: black;
 }
+
 img {
-  display: block;
+  display: inline-block;
 }
-#board {
+
+#city {
   background-image: url("../images/city.jpg");
   background-size: cover;
   background-position: bottom;
+  height: 450px;
 }
 
-.box {
+#reset {
+  background-color: #F44E08;
+}
+
+#start {
+  position: relative;
+  top: 20%;
+  left: 0%;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+}
+
+.sky {
   border: .5px dotted gray;
-  height: 150px;
+  height: 65px;
   background: none;
 }
 
-#r1 {
-    background-image: url("images/coptor.png");
+.heli {
+  background-image: url("../images/coptor.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
+
+/*.sky:hover {
+  background-image: url("../images/coptor.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}*/
+
+#startbox {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+
+/*.box {
+  border: .5px dotted gray;
+  height: 100px;
+  background: none;
+}*/
+
+
+/*
 .blue {
   border: 1px solid black;
   height: 150px;
@@ -30,20 +74,34 @@ img {
   border: 1px solid black;
   height: 150px;
   background: red;
-}
+}*/
 
-.box:hover {
-  background-color: white;
-}
 
-span {
+/*span {
   color: #EE2D0D;
-}
+}*/
 
 h3 {
   text-align: center;
 }
 
 h1 {
-  color: white;
+  color: #0BD1F8;
+}
+
+#scroll {
+	background: #870a0c url(../images/city.jpg) repeat-x;
+	-webkit-animation: move-city-top 15s infinite linear;
+	height: 200px;
+	position: relative;
+}
+
+/*
+	Animation Definitions
+*/
+
+@-webkit-keyframes move-city-top {
+from { background-position: -533px -50px; }
+  to { background-position: 0 -50px; }
+
 }
