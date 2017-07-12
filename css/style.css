@@ -55,7 +55,7 @@ img {
 }
 
 .boom {
-  background-image: url("../images/boom.gif");
+  background-image: url("../images/boom.gif") !important;
   background-size: contain;
   background-repeat: no-repeat;
 }
