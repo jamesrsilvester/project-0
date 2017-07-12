@@ -6,7 +6,7 @@ h3 {
 }
 
 h1 {
-  color: gray;
+  color: #F44E08;
 }
 
 body {
@@ -63,7 +63,15 @@ img {
   background-repeat: no-repeat;
 }
 
+.bomb {
+  /*border: 1px solid blue;*/
+}
 
+.finish {
+  background-image: url("../images/finish.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 /*.sky:hover {
   background-image: url("../images/coptor.png");
   background-size: contain;

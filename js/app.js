@@ -1,14 +1,18 @@
 
 $(document).ready(function() {
-  // all code to manipulate the DOM goes inside this function
-  console.log("Script is linked");
-  let stillFlying = false;
-  // var audio = new Audio('song.m4a');
-  // audio.play();
-  // Reset Logic
+
   hitReset = function () {location.reload()};
   //Reset Button Listener
   $('#reset').on("click", hitReset);
+  $(document).on("keypress", hitReset);
+  // all code to manipulate the DOM goes inside this function
+  console.log("Script is linked");
+  let stillFlying = false;
+  var audio = new Audio('song.m4a');
+  audio.play();
+  // Reset Logic
+
+
 
   // Click Start Button to....
   $('#start').on("click", mouseTracking = function () {
