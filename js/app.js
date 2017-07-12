@@ -36,6 +36,7 @@ $(document).ready(function() {
         if ($(`#${idBoxClicked}`).hasClass("bomb")){
           $(`#${idBoxClicked}`).removeClass( "heli" );
           $(`#${idBoxClicked}`).addClass( "boom" );
+          $(`#reset`).text( "Try another path! Hit Any Key to Reset");
           stillFlying = false;
         };
 
@@ -43,6 +44,7 @@ $(document).ready(function() {
           $(`body`).css( "background","white");
           $(`h1`).css( "color","black");
           $(`h1`).text( "You Win!");
+          $(`#reset`).text( "Hit Any Key to Reset");
           stillFlying = false;
         };
 
