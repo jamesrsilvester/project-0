@@ -1,21 +1,35 @@
 /*
 Animations:
 */
+h3 {
+  text-align: center;
+}
+
+h1 {
+  color: gray;
+}
 
 body {
   background: black;
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: none;
 }
 
 img {
   display: inline-block;
 }
 
-#city {
+/*#cityOld {
   background-image: url("../images/city.jpg");
   background-size: cover;
   background-position: bottom;
   height: 450px;
-}
+}*/
 
 #reset {
   background-color: #F44E08;
@@ -32,13 +46,19 @@ img {
 }
 
 .sky {
-  border: .5px dotted gray;
+  /*border: .5px dotted gray;*/
   height: 65px;
   background: none;
 }
 
 .heli {
   background-image: url("../images/coptor.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.boom {
+  background-image: url("../images/boom.gif");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -81,19 +101,17 @@ img {
   color: #EE2D0D;
 }*/
 
-h3 {
-  text-align: center;
-}
 
-h1 {
-  color: #0BD1F8;
-}
 
-#scroll {
-	background: #870a0c url(../images/city.jpg) repeat-x;
-	-webkit-animation: move-city-top 15s infinite linear;
-	height: 200px;
+#city {
+	background: black url(../images/cityb.jpg) repeat-x;
+	height: 500px;
 	position: relative;
+  background-size: contain;
+}
+
+.cityMoves {
+  -webkit-animation: move-city-top 15s infinite linear;
 }
 
 /*
@@ -101,7 +119,7 @@ h1 {
 */
 
 @-webkit-keyframes move-city-top {
-from { background-position: -533px -50px; }
-  to { background-position: 0 -50px; }
+from { background-position: -533px; }
+  to { background-position: 0px; }
 
 }
