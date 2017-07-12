@@ -35,6 +35,8 @@ $(document).ready(function() {
         //If Bomb, heli explodes - if not
         if ($(`#${idBoxClicked}`).hasClass("bomb")){
           $(`#${idBoxClicked}`).removeClass( "heli" );
+          var audio2 = new Audio('boom.mp3');
+          audio2.play();
           $(`#${idBoxClicked}`).addClass( "boom" );
           $(`#reset`).text( "Try another path! Hit Any Key to Reset");
           stillFlying = false;
