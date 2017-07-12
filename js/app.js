@@ -38,7 +38,8 @@ $(document).ready(function() {
           var audio2 = new Audio('boom.mp3');
           audio2.play();
           $(`#${idBoxClicked}`).addClass( "boom" );
-          $(`#reset`).text( "Try another path! Hit Any Key to Reset");
+          $(`h1`).text( "HIT ANY KEY TO RESET");
+          $(`#reset`).text( "HINT: BOMBS DON'T MOVE");
           stillFlying = false;
         };
 
