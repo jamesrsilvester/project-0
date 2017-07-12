@@ -12,12 +12,11 @@ $(document).ready(function() {
   audio.play();
   // Reset Logic
 
-
-
   // Click Start Button to....
   $('#start').on("click", mouseTracking = function () {
     //remove start button
      stillFlying = true;
+    $('#start').addClass( "heli" );
     $('#start').remove();
 
     //assigns overall listener as gameboard
